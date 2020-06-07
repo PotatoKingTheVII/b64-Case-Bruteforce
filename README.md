@@ -1,2 +1,2 @@
-# b64-Case-Bruteforce
-Bruteforce b64 that has lost case
+##  b64-Case-Bruteforce
+Lists all combinations from case that fall within the ascii 32 to 126 range
