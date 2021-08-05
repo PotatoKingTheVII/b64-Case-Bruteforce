@@ -72,10 +72,13 @@ def combineResults():
     CurrentSrollPos = plaintextTXT.yview()
     finalResult = ""
     for listChoice in buttonList:
-        choiceValueINDEX = (listChoice.curselection())
-        choiceValue = listChoice.get(choiceValueINDEX)
-        if(choiceValue):
-            finalResult += choiceValue
+        try:
+            choiceValueINDEX = (listChoice.curselection())
+            choiceValue = listChoice.get(choiceValueINDEX)
+            if(choiceValue):
+                finalResult += choiceValue
+        except:
+            pass
 
 
     plaintextTXT.delete(1.0, 'end-1c')
