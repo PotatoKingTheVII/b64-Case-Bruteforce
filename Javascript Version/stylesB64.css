@@ -1,0 +1,119 @@
+.center-screen{
+    position: absolute;
+	width: 100%;
+	margin-top: 0px;
+}
+
+#HeaderPNG{
+	margin-top: 0px;
+	padding-top: 5px;
+}
+
+.topHeader{
+	background-color: #353535;
+	width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.headerLinks{
+	font-size: 20px;
+	padding: 11px 11px 11px 11px;
+	
+}
+
+
+
+/*Unvisited*/
+a:link {
+  color: #ff0000;
+}
+
+/*Visited*/
+a:visited {
+  color: #ff0000;
+}
+
+/*Mouse Over*/
+a:hover {
+  color: #ff0000;
+}
+
+/*Selected*/
+a:active {
+  color: #ff0000;
+}
+
+
+
+
+body{
+	text-align: center;
+	background-color: #212121;
+	display: table;
+	margin: 0px;
+
+	
+}
+
+.Selectrow {
+	margin: auto;
+	text-align: center;
+	width: 800px;
+}
+
+textarea {
+    resize: vertical;
+	background-coloR: #2E2E2E;
+	color: #afafaf;
+	font-size: 18px;
+}
+
+h1{
+	font-family: sans-serif;
+	font-size: 36px;
+	color: #FFFFFF;
+}
+
+h2{
+	font-family: sans-serif;
+	font-size: 30px;
+	color: #FFFFFF;
+}
+
+p{
+	font-family: sans-serif;
+	font-size: 15px;
+	color: #FFFFFF;
+}
+
+p1{
+	font-family: sans-serif;
+	font-size: 15px;
+	color: #FFFFFF;
+}
+
+label{
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+input{
+	font-family: sans-serif;
+	font-size: 15px;
+	color: #FFFFFF;
+}
+
+select{
+	overflow-y: auto;
+	display: inline-block;
+	background-color: #212121;
+	margin: 0px;
+	font-family: sans-serif;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
