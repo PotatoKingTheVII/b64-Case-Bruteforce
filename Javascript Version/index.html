@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+<title>Base64 Casing Bruteforce</title>
+<script type="text/javascript" src="decodeB64.js"></script>
+<link rel="stylesheet" href="stylesB64.css">
+</head>
+
+<body>
+<!--Top header-->
+<div class="center-screen">
+	<div class="topHeader">
+		<h1 id="HeaderPNG">Base64 Casing Bruteforcer</h1>
+		<p>Recover printable text payloads from base64 that has lost its casing</p>
+
+	</div>
+	<hr>
+
+	<!--DECODE SECTION START-->
+	<div class="row">
+		<div class="column">
+			<h2>Decode Ciphertext</h2>
+			<br>
+
+			<div class="row">		
+				<label for="inputTxt">Raw Ciphertext:</label>
+			</div>
+
+			<div class="row">		
+				<textarea id="inputTxt" name="inputTxt" rows="10" cols="80"/></textarea>
+			</div>
+			
+			<button onclick="bruteforceCall()">Bruteforce</button>			
+			
+			<div class="row">	
+				<label for="outputTxt">Decoded output:</label>
+
+			</div>
+			
+			<div class="row">
+				<textarea id="outputTxt" name="outputTxt" rows="10" cols="80"/></textarea>
+			</div>		
+			
+			<div class="Selectrow" id ="selectBoxes">
+				
+			</div>	
+			
+			
+		</div>
+		<!--DECODE SECTION END-->
+		
+		
+	<!--Footer-->	
+	<hr>
+	<p1>You can learn more about how this method works and the code at </p1>
+	<a href="https://github.com/PotatoKingTheVII/b64-Case-Bruteforce">github</a>
+	<p1>and contact me on Discord, PotatoKingTheVII#4280</p1>
+	
+</div>
+</body>
+
+
+<script>
+//From https://gist.github.com/biesiad/889139
+String.prototype.rightJustify = function( length, char ) {
+    var fill = [];
+    while ( fill.length + this.length < length ) {
+      fill[fill.length] = char;
+    }
+    return this + fill.join('');
+}
+
+
+function bruteforceCall()	//Sanity check and pad the ciphertext before calling the proper function
+{
+	var ciphertext_len = document.getElementById('inputTxt').value.length;
+	var padded_len = Math.ceil(ciphertext_len/4)*4;
+	var ciphertext = document.getElementById('inputTxt').value.rightJustify(padded_len,"=");
+
+	bruteforce(ciphertext);	//Call the actual function now
+	
+	
+}
+
+</script>
+
+</html>
